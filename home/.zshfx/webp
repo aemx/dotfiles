@@ -1,0 +1,27 @@
+if [[ -z "$2" ]]; then
+    q=100
+else
+    q=$2
+fi
+
+if [[ -d "$1" ]]; then
+    for f in "$1"/*; do
+        local file="${f##*/}"
+        local name="${file%.*}"
+        local ext="${file##*.}"
+        echo $file
+        if [[ $ext == "webp" ]]; then
+            magick "$1/$name.webp" "$1/$name.png"
+        else
+            magick "$1/$name.$ext" -quality $q -define webp:alpha-quality=$q -define webp:method=6 "$1/$name.webp"
+        fi
+    done
+else
+    local name="${1%.*}"
+    local ext="${1##*.}"
+    if [[ $ext == "webp" ]]; then
+        magick "$name.webp" "$name.png"
+    else
+        magick "$name.$ext" -quality $q -define webp:alpha-quality=$q -define webp:method=6 "$name.webp"
+    fi
+fi

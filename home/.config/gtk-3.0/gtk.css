@@ -1,0 +1,43 @@
+#launcher-arrow {
+  padding: 0 20px;
+  background-color: #131316;
+}
+
+#launcher-arrow:hover {
+  background-color: #25252e;
+}
+
+#pulseaudio-button {
+  background-color: #131316;
+}
+
+#pulseaudio-button:hover {
+  background-color: #25252e;
+}
+
+#pulseaudio-button image {
+  -gtk-icon-transform: scale(0.8);
+}
+
+#clock-button {
+  padding: 0 8px;
+  background-color: #131316;
+  margin-right: 6px;
+}
+
+#clock-button:hover {
+  background-color: #25252e;
+}
+
+#genmon-2 .genmon_imagebutton {
+  border-left: 1px solid #515167;
+  background-color: #131316;
+}
+
+#genmon-2 .genmon_imagebutton:hover {
+  background-color: #25252e;
+}
+
+#genmon-2 image {
+  -gtk-icon-transform: scale(0);
+}

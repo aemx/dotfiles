@@ -1,0 +1,124 @@
+@import "ceres.rasi"
+
+configuration {
+  display-drun: "";
+  display-file-browser-extended: "";
+  display-clipboard: "";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+element-icon, element-text, scrollbar {
+  cursor: pointer;
+}
+
+window {
+  location: center;
+  width: 520px;
+  height: 552px;
+
+  background-color: @bg;
+  border-radius: 8px;
+}
+
+mainbox {
+  padding: 16px;
+  spacing: 16px;
+}
+
+textbox {
+  vertical-align: 0.5;
+  horizontal-align: 0.5;
+}
+
+textbox-search, entry, element-icon, element-text {
+  vertical-align: 0.5;
+}
+
+inputbar {
+  children: [ searchbar, mode-switcher ];
+  spacing: 16px;
+}
+
+searchbar {
+  children: [ textbox-search, entry ];
+  padding: 8px 12px;
+  border: 2px;
+  border-color: @accent;
+  border-radius: 6px;
+  background-color: @bg-dark;
+  spacing: 0.5em;
+  spacing: 18px;
+  orientation: horizontal;
+}
+
+textbox-search {
+  expand: false;
+  content: "";
+  font: "JetBrainsMono Nerd Font 12";
+}
+
+entry {
+  placeholder: "Type here to search";
+  placeholder-color: @comment;
+  cursor: text;
+}
+
+mode-switcher {
+  spacing: 16px;
+}
+
+button {
+  padding: 10px 21px 10px 15px;
+  border-radius: 6px;
+  background-color: @selected;
+  cursor: pointer;
+  font: "JetBrainsMono Nerd Font 12";
+}
+
+button selected {
+  background-color: @accent;
+  text-color: @fg-lite;
+}
+
+listview {
+  columns: 1;
+  spacing: 4px;
+  fixed-height: true;
+  fixed-columns: true;
+  scrollbar: true;
+}
+
+scrollbar {
+  handle-width: 4px;
+  margin: 0 0 0 4px;
+  handle-color: @comment;
+  border-radius: 100%;
+  background-color: @selected;
+}
+
+element {
+  spacing: 0.5em;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+element selected {
+  background-color: @selected;
+}
+
+element selected urgent {
+  background-color: @accent;
+}
+
+element-icon {
+  size: 1.25em;
+}
+
+element-text {
+  text-color: inherit;
+}

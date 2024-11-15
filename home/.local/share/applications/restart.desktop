@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Restart
+Comment=
+Exec=reboot
+Icon=xfsm-reboot
+Path=
+Terminal=false
+StartupNotify=false

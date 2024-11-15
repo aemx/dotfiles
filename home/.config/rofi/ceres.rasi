@@ -1,0 +1,11 @@
+* {
+  bg-dark: #131316;
+  bg: #1a1a1f;
+  selected: #25252e;
+  fg: #b8b8c7;
+  fg-lite: #f2f3f5;
+  comment: #515167;
+  accent: #855ee8;
+  background-color: transparent;
+  text-color: @fg;
+}

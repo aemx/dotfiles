@@ -1,0 +1,30 @@
+@import "main.rasi"
+
+listview {
+  columns: 8;
+  spacing: 2px 8px;
+  cycle: true;
+  dynamic: true;
+  layout: vertical;
+  flow: horizontal;
+  reverse: false;
+  fixed-height: true;
+  fixed-columns: true;
+  scrollbar: true;
+}
+
+element {
+  spacing: 0;
+  padding: 4px;
+}
+
+element-icon {
+  size: 0;
+}
+
+element-text {
+  text-color: inherit;
+  vertical-align:   0.5;
+  horizontal-align: 0.5;
+  font: "JetBrainsMono Nerd Font 17";
+}

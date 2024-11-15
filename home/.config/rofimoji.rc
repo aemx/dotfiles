@@ -1,0 +1,6 @@
+action = copy
+max-recent = 0
+skin-tone = neutral
+hidden-descriptions = true
+selector-args = "-theme ~/.config/rofi/grid.rasi"
+files = [emojis, math, miscellaneous, supplemental, alchemical_symbols, dingbats]

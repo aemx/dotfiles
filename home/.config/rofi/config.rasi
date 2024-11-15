@@ -1,0 +1,14 @@
+configuration {
+  modi: "drun,file-browser-extended";
+  font: "Barlow Regular 12";
+	show-icons: true;
+  icon-theme: "Windows 10";
+  terminal: "kitty";
+  drun-display-format: "{name}";
+  hover-select: true;
+  scrollbar: true;
+  me-select-entry: "";
+  me-accept-entry: [ MousePrimary, MouseSecondary, MouseDPrimary ];
+  run-shell-command: "kitty --hold {cmd}";
+}
+@theme "main"

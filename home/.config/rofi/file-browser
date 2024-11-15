@@ -1,0 +1,11 @@
+dir             ~
+no-descend      true
+depth           0
+hide-parent     hidden
+disable-status  true
+
+exclude         .git
+exclude         node_modules
+exclude         games
+exclude         itg
+exclude         *.desktop

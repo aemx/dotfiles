@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <property name="dark-mode" type="bool" value="true"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=8;x=640;y=786"/>
+      <property name="length" type="double" value="100"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="icon-size" type="uint" value="24"/>
+      <property name="size" type="uint" value="48"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="4"/>
+        <value type="int" value="1"/>
+        <value type="int" value="11"/>
+        <value type="int" value="6"/>
+        <value type="int" value="8"/>
+        <value type="int" value="12"/>
+        <value type="int" value="2"/>
+      </property>
+      <property name="mode" type="uint" value="0"/>
+      <property name="enable-struts" type="bool" value="true"/>
+      <property name="background-style" type="uint" value="1"/>
+      <property name="background-rgba" type="array">
+        <value type="double" value="0.074509803921568626"/>
+        <value type="double" value="0.074509803921568626"/>
+        <value type="double" value="0.086274509803921567"/>
+        <value type="double" value="1"/>
+      </property>
+      <property name="leave-opacity" type="uint" value="100"/>
+      <property name="enter-opacity" type="uint" value="100"/>
+      <property name="background-image" type="string" value="file:///~/.ceri/bg.png"/>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-6" type="string" value="systray">
+      <property name="square-icons" type="bool" value="true"/>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="clipman"/>
+      </property>
+      <property name="hidden-legacy-items" type="array">
+      </property>
+      <property name="icon-size" type="int" value="22"/>
+    </property>
+    <property name="plugin-8" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="show-notifications" type="bool" value="true"/>
+      <property name="play-sound" type="bool" value="true"/>
+      <property name="known-players" type="string" value="firefox"/>
+    </property>
+    <property name="plugin-11" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="true"/>
+    </property>
+    <property name="plugin-12" type="string" value="clock">
+      <property name="mode" type="uint" value="2"/>
+      <property name="digital-date-font" type="string" value="Barlow 11"/>
+      <property name="digital-time-font" type="string" value="JetBrainsMonoNL Nerd Font 9"/>
+      <property name="digital-time-format" type="string" value="&lt;span line-height=&quot;0.85px&quot;&gt;&lt;b&gt;%l:%M:%S %p%n&lt;/b&gt;%d %b %Y&lt;/span&gt;"/>
+      <property name="digital-date-format" type="string" value="%d %b %Y"/>
+      <property name="digital-layout" type="uint" value="3"/>
+      <property name="timezone" type="string" value="America/Chicago"/>
+      <property name="tooltip-format" type="string" value="%A, %d %B %Y"/>
+    </property>
+    <property name="plugin-1" type="string" value="dockbarx">
+      <property name="block-autohide" type="bool" value="false"/>
+      <property name="offset" type="int" value="0"/>
+      <property name="max-size" type="int" value="0"/>
+      <property name="mode" type="int" value="2"/>
+      <property name="color" type="string" value="rgb(16,16,16)"/>
+    </property>
+    <property name="plugin-2" type="string" value="genmon">
+      <property name="command" type="string" value="sh /home/ceri/.config/xfce4/panel/genmon/showdesktop-wrapper.sh"/>
+      <property name="use-label" type="bool" value="true"/>
+      <property name="text" type="string" value=""/>
+      <property name="update-period" type="int" value="86400000"/>
+      <property name="enable-single-row" type="bool" value="true"/>
+      <property name="font" type="string" value="Barlow 10"/>
+    </property>
+    <property name="plugin-4" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="17311340881.desktop"/>
+      </property>
+      <property name="disable-tooltips" type="bool" value="true"/>
+      <property name="show-label" type="bool" value="false"/>
+    </property>
+  </property>
+</channel>
