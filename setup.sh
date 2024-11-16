@@ -86,12 +86,6 @@ elif [[ $1 == "2" ]]; then
   useradd -m -G wheel -s /usr/bin/zsh ceri
   passwd ceri
 
-  # Load configurations
-  git clone https://github.com/aemx/dotfiles ~/tmp/dotfiles
-  cp -R ~/tmp/dotfiles/home ~
-  cp -R ~/tmp/dotfiles/usr /usr
-  cp -R ~/tmp/dotfiles/etc /etc
-
   # Clean up and reboot
   exit
   umount -R /mnt
@@ -150,6 +144,12 @@ elif [[ $1 == "3" ]]; then
 
   # Clear yay cache
   yay -Sc --noconfirm
+
+  # Load configurations
+  git clone https://github.com/aemx/dotfiles ~/tmp/dotfiles
+  cp -R ~/tmp/dotfiles/home ~
+  cp -R ~/tmp/dotfiles/usr /usr
+  cp -R ~/tmp/dotfiles/etc /etc
 
   # END INSTALLATION ==========================================================
 
