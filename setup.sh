@@ -93,6 +93,14 @@ elif [[ $1 == "2" ]]; then
 
 elif [[ $1 == "3" ]]; then
 
+  # Load configurations (usr, etc)
+  git clone https://github.com/aemx/dotfiles ~/tmp/dotfiles
+  sudo cp -R ~/tmp/dotfiles/usr/. /usr
+  sudo cp -R ~/tmp/dotfiles/etc/. /etc
+
+  # Update package database
+  sudo pacman -Syu
+
   # Check for hardware vulnerabilities (not required for a VM)
     # lscpu
 
@@ -122,11 +130,6 @@ elif [[ $1 == "3" ]]; then
 
   # BEGIN INSTALLATION ========================================================
 
-  # Load configurations (usr, etc)
-  git clone https://github.com/aemx/dotfiles ~/tmp/dotfiles
-  sudo cp -R ~/tmp/dotfiles/usr/. /usr
-  sudo cp -R ~/tmp/dotfiles/etc/. /etc
-
   for file in ~/tmp/dotfiles/pkgs/*.ceripkg; do
     while read -r line; do
       strarr=($line)
@@ -143,8 +146,6 @@ elif [[ $1 == "3" ]]; then
   # exceptions
   # create.fadein
   # dev.nvm
-  printf "\e[30;105mInstalling steam...\e[m\n"
-  sudo pacman -Sy steam --noconfirm
   # tools.discordchatexporter
   # tools.nine-or-null
   # tools.ntsc-rs
