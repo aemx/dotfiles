@@ -124,8 +124,8 @@ elif [[ $1 == "3" ]]; then
 
   # Load configurations (usr, etc)
   git clone https://github.com/aemx/dotfiles ~/tmp/dotfiles
-  sudo cp -R ~/tmp/dotfiles/usr /usr
-  sudo cp -R ~/tmp/dotfiles/etc /etc
+  sudo cp -R ~/tmp/dotfiles/usr/. /usr
+  sudo cp -R ~/tmp/dotfiles/etc/. /etc
 
   for file in ~/tmp/dotfiles/pkgs/*.ceripkg; do
     while read -r line; do
