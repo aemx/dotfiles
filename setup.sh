@@ -122,7 +122,10 @@ elif [[ $1 == "3" ]]; then
 
   # BEGIN INSTALLATION ========================================================
 
+  # Load configurations (usr, etc)
   git clone https://github.com/aemx/dotfiles ~/tmp/dotfiles
+  cp -R ~/tmp/dotfiles/usr /usr
+  cp -R ~/tmp/dotfiles/etc /etc
 
   for file in ~/tmp/dotfiles/pkgs/*.ceripkg; do
     while read -r line; do
@@ -149,10 +152,8 @@ elif [[ $1 == "3" ]]; then
   # Clear paru cache
   paru -Sc --noconfirm
 
-  # Load configurations
+  # Load configurations (home folder)
   cp -R ~/tmp/dotfiles/home/. ~
-  cp -R ~/tmp/dotfiles/usr /usr
-  cp -R ~/tmp/dotfiles/etc /etc
 
   # END INSTALLATION ==========================================================
 
