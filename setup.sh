@@ -50,7 +50,7 @@ if [[ $1 == "1" ]]; then
 
 ################################################################################
 
-elif [[ $1 == "3" ]]; then
+elif [[ $1 == "2" ]]; then
 
   # Generate time zone and locale files
   ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
