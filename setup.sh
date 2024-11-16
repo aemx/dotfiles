@@ -94,9 +94,9 @@ elif [[ $1 == "2" ]]; then
 elif [[ $1 == "3" ]]; then
 
   # Load configurations (usr, etc)
-  git clone https://github.com/aemx/dotfiles ~/tmp/dotfiles
-  sudo cp -R ~/tmp/dotfiles/usr/. /usr
-  sudo cp -R ~/tmp/dotfiles/etc/. /etc
+   # git clone https://github.com/aemx/dotfiles ~/tmp/dotfiles
+   # cp -a ~/tmp/dotfiles/usr/. /usr
+   # cp -a ~/tmp/dotfiles/etc/. /etc
 
   # Update package database
   sudo pacman -Syu
@@ -154,7 +154,7 @@ elif [[ $1 == "3" ]]; then
   paru -Sc --noconfirm
 
   # Load configurations (home folder)
-  cp -R ~/tmp/dotfiles/home/. ~
+  cp -a ~/tmp/dotfiles/home/. ~
 
   # END INSTALLATION ==========================================================
 
