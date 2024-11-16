@@ -132,10 +132,10 @@ elif [[ $1 == "3" ]]; then
       strarr=($line)
       if [[ ${strarr[0]} == "a" ]]; then
         printf "\e[30;105mInstalling ${strarr[1]}...\e[m\n"
-        paru -S ${strarr[1]} --noconfirm > /dev/null 2>&1
+        paru -S ${strarr[1]} --noconfirm
       elif [[ ${strarr[0]} == "-" ]]; then
         printf "\e[30;105mInstalling ${strarr[1]}...\e[m\n"
-        sudo pacman -S ${strarr[1]} --noconfirm > /dev/null 2>&1
+        sudo pacman -S ${strarr[1]} --noconfirm
       fi
     done <$file
   done
@@ -144,7 +144,7 @@ elif [[ $1 == "3" ]]; then
   # create.fadein
   # dev.nvm
   printf "\e[30;105mInstalling steam...\e[m\n"
-  sudo pacman -Sy steam > /dev/null 2>&1
+  sudo pacman -Sy steam --noconfirm
   # tools.discordchatexporter
   # tools.nine-or-null
   # tools.ntsc-rs
