@@ -40,6 +40,7 @@
       <property name="Super_L" type="string" value="rofi -show"/>
       <property name="&lt;Super&gt;e" type="string" value="rofimoji"/>
       <property name="&lt;Super&gt;c" type="string" value="rofi -modi &quot;clipboard:greenclip print&quot; -show clipboard -no-show-icons"/>
+      <property name="&lt;Super&gt;d" type="string" value="sh /home/ceri/.config/xfce4/panel/genmon/showdesktop.sh"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

@@ -1,0 +1,91 @@
+#-Backgrounds-----
+
+19,19,22          player background (top panel)
+26,26,31          playlist panel
+23,23,28          side panel
+26,26,31          bottom panel
+26,26,31          gallery background
+26,26,31          playlist background
+26,26,31          queue panel
+26,26,31          tracklist panel
+
+#-Frame-----------
+
+26,26,31          sep line
+26,26,31          bb line
+26,26,31          tb line
+
+#-Playlist--------
+
+242,243,245       track line
+81,81,103         track time
+184,184,199       track index
+184,184,199       track artist
+152,195,121       album line
+
+242,243,245       track playing
+81,81,103         time playing
+184,184,199       index playing
+184,184,199       artist playing
+152,195,121       album playing
+
+240,115,115       track missing
+
+184,184,199       fav line
+26,26,31          folder line
+167,142,232       folder title 
+
+48,48,60          playing highlight
+48,48,60          select highlight
+198,120,221       gallery highlight
+
+#-Bottom panel-----
+
+81,81,103         buttons off
+184,184,199       buttons over
+133,94,232        buttons active
+
+133,94,232        playing time
+
+133,94,232        seek bar
+133,94,232        volume bar
+48,48,60          seek bg
+48,48,60          volume bg
+184,184,199       scroll bar
+
+81,81,103         mode off
+184,184,199       mode over
+133,94,232        mode on
+
+184,184,199       bottom title
+
+#-Menu-------------
+
+19,19,22          menu background
+19,19,22          menu border
+48,48,60          menu highlight
+184,184,199       menu text
+81,81,103         menu disable text
+184,184,199       menu icons
+
+#-Top panel---------
+
+198,120,221       tab active line
+184,184,199       tab line
+26,26,31          tab background
+43,48,59          tab over
+53,59,69          tab active background
+133,94,232        music vis
+
+#-Side panel--------
+
+184,184,199       title info
+184,184,199       extra info
+26,26,31          art border
+
+#-Mini Mode---------
+
+26,26,31          mini bg
+32,32,32          mini border
+184,184,199       mini text 1
+250,189,47        mini text 2
