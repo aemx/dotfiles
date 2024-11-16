@@ -1,6 +1,6 @@
-y bun-bin
+a bun-bin
 # nvm
 - python
 - qemu-full
 - virt-manager
-y visual-studio-code-bin
+a visual-studio-code-bin

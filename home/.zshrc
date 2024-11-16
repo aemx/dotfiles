@@ -90,8 +90,8 @@ alias wolfram='wolframalpha'
 alias arch_update='sudo pacman -Syu'
 alias pacin='sudo pacman -S'
 alias pacun='sudo pacman -Rcns'
-alias yayin='yay -S'
-alias yayun='yay -Rcns'
+alias aurin='paru -S'
+alias aurun='paru -Rcns'
 
 # Aliases: Programs
 alias py='"/c/Program Files/Python310/python.exe"'

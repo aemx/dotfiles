@@ -1,8 +1,8 @@
 - arduino-ide
 - deluge
-y dolphin-emu-git
+a dolphin-emu-git
 - mpv
-y prismlauncher-qt5-bin
-y soulseekqt
+a prismlauncher-qt5-bin
+a soulseekqt
 # steam
-y tauon-music-box
+a tauon-music-box

@@ -87,9 +87,9 @@ elif [[ $1 == "2" ]]; then
   passwd ceri
 
   # Clean up and reboot
-  exit
-  umount -R /mnt
-  reboot
+    # exit
+    # umount -R /mnt
+    # reboot
 
 elif [[ $1 == "3" ]]; then
 
@@ -107,28 +107,32 @@ elif [[ $1 == "3" ]]; then
   sudo systemctl enable paccache.timer
   sudo paccache -rk1
 
-  # Install AUR dependencies (nosudo)
+  # resolv.conf
   ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-  git clone https://aur.archlinux.org/yay.git
-  cd yay
+
+  # Install paru
+  git clone https://aur.archlinux.org/paru.git
+  cd paru
   makepkg -si
   cd ..
-  rm -rf yay
+  rm -rf paru
 
   # Install VirtualBox utils
   pacman -S virtualbox-guest-utils
 
   # BEGIN INSTALLATION ========================================================
 
+  git clone https://github.com/aemx/dotfiles ~/tmp/dotfiles
+
   for file in ~/tmp/dotfiles/pkgs/*.ceripkg; do
     while read -r line; do
       strarr=($line)
-      if [[ ${strarr[0]} == "y" ]]; then
+      if [[ ${strarr[0]} == "a" ]]; then
         printf "\e[30;105mInstalling ${strarr[1]}...\e[m\n"
-        yay -S ${strarr[1]} --noconfirm
+        paru -S ${strarr[1]} --noconfirm > /dev/null 2>&1
       elif [[ ${strarr[0]} == "-" ]]; then
         printf "\e[30;105mInstalling ${strarr[1]}...\e[m\n"
-        sudo pacman -S ${strarr[1]} --noconfirm
+        sudo pacman -S ${strarr[1]} --noconfirm > /dev/null 2>&1
       fi
     done <$file
   done
@@ -137,17 +141,16 @@ elif [[ $1 == "3" ]]; then
   # create.fadein
   # dev.nvm
   printf "\e[30;105mInstalling steam...\e[m\n"
-  sudo pacman -Sy steam
+  sudo pacman -Sy steam > /dev/null 2>&1
   # tools.discordchatexporter
   # tools.nine-or-null
   # tools.ntsc-rs
 
-  # Clear yay cache
-  yay -Sc --noconfirm
+  # Clear paru cache
+  paru -Sc --noconfirm
 
   # Load configurations
-  git clone https://github.com/aemx/dotfiles ~/tmp/dotfiles
-  cp -R ~/tmp/dotfiles/home ~
+  cp -R ~/tmp/dotfiles/home/. ~
   cp -R ~/tmp/dotfiles/usr /usr
   cp -R ~/tmp/dotfiles/etc /etc
 
@@ -171,6 +174,6 @@ elif [[ $1 == "3" ]]; then
   # TODO: config mpv
 
   # Reboot
-  reboot
+   # sudo reboot
 
 fi
