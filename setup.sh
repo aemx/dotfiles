@@ -78,8 +78,10 @@ elif [[ $1 == "2" ]]; then
   systemctl enable systemd-resolved
   printf "[Match]\nName=$(ls /sys/class/net/ | grep -v lo)\n\n[Network]\nDHCP=yes\n" > /etc/systemd/network/20-wired.network
 
-  # Enable parallel downloads on pacman
-    # sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
+  # Enable color, parallel downloads, and multilib on pacman
+  sed -i 's|#Color|Color|g' /etc/pacman.conf
+  sed -i 's|#ParallelDownloads = 5|ParallelDownloads = 10|g' /etc/pacman.conf
+  sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
   # Set up users/groups/sudoers
   sed -i '/%wheel ALL=(ALL:ALL) ALL/s/^# //g' /etc/sudoers
@@ -93,10 +95,8 @@ elif [[ $1 == "2" ]]; then
 
 elif [[ $1 == "3" ]]; then
 
-  # Load configurations (usr, etc)
-   # git clone https://github.com/aemx/dotfiles ~/tmp/dotfiles
-   # cp -a ~/tmp/dotfiles/usr/. /usr
-   # cp -a ~/tmp/dotfiles/etc/. /etc
+  # Begin load configurations (usr, etc)
+  git clone https://github.com/aemx/dotfiles ~/tmp/dotfiles
 
   # Update package database
   sudo pacman -Syu
@@ -170,12 +170,15 @@ elif [[ $1 == "3" ]]; then
 
   # Download cursors
   curl -L https://github.com/birbkeks/windows-cursors/releases/download/1.0/windows-cursors.tar.gz > ~/tmp/windows-cursors.tar.gz
-  tar -xzvf desktop/windows-cursors.tar.gz -C ~/.icons
-  rm -rf ~/tmp
+  tar -xzvf ~/tmp/windows-cursors.tar.gz -C ~/.icons
 
   # TODO: config mpv
 
+  # Copy configs
+    # cp -a ~/tmp/dotfiles/usr/. /usr
+    # cp -a ~/tmp/dotfiles/etc/. /etc
+
   # Reboot
-   # sudo reboot
+    # sudo reboot
 
 fi
