@@ -23,12 +23,12 @@
 if [[ $1 == "1" ]]; then
 
   # Build file systems
-  mkfs.ext4 -L os /dev/sda3
+  mkfs.ext4 -L arch /dev/sda3
   mkfs.fat -F32 -n boot /dev/sda1
   mkswap -L swap /dev/sda2
 
   # Mount file systems
-  mount /dev/disk/by-label/os /mnt
+  mount /dev/disk/by-label/arch /mnt
   mkdir -p /mnt/boot
   mount /dev/disk/by-label/boot /mnt/boot
   swapon /dev/sda2
@@ -47,6 +47,9 @@ if [[ $1 == "1" ]]; then
 # Change root into the new system
   # arch-chroot /mnt
 
+# Create hostname file
+  # echo hostname_name > /etc/hostname
+
 ################################################################################
 
 elif [[ $1 == "2" ]]; then
@@ -58,9 +61,6 @@ elif [[ $1 == "2" ]]; then
   echo LANG=en_US.UTF-8 > /etc/locale.conf
   sed -e '/en_US/s/^#*//g' -i /etc/locale.gen
   locale-gen
-
-  # Create hostname file
-  echo virt > /etc/hostname
 
   # Create new initramfs (For LVM, system encryption or RAID, modify mkinitcpio.conf)
   mkinitcpio -P
@@ -130,7 +130,12 @@ elif [[ $1 == "3" ]]; then
   rm -rf paru
 
   # Install VirtualBox utils
-  sudo pacman -S virtualbox-guest-utils --noconfirm
+    # sudo pacman -S virtualbox-guest-utils --noconfirm
+
+  # Install Dropbox public key
+  curl https://linux.dropbox.com/fedora/rpm-public-key.asc > rpm-public-key.asc
+  gpg --import rpm-public-key.asc
+  rm rpm-public-key.asc
 
   # BEGIN INSTALLATION ========================================================
 
@@ -149,13 +154,6 @@ elif [[ $1 == "3" ]]; then
       fi
     done <$file
   done
-
-  # exceptions
-  # create.fadein
-  # dev.nvm
-  # tools.discordchatexporter
-  # tools.nine-or-null
-  # tools.ntsc-rs
 
   # Clear paru cache
   paru -Sc --noconfirm
@@ -177,6 +175,17 @@ elif [[ $1 == "3" ]]; then
   # Set up virt-manager
   systemctl enable libvirtd.socket
 
+
+  # Download XFCE4 theme
+  - Download theme to 
+  git clone https://github.com/aemx/ceres-gtk /home/ceri/.themes/ceres
+
+  # Download login/lock theme
+  git clone https://github.com/aemx/winluxe-greeter /usr/share/web-greeter/themes/winluxe
+
+  # Download icon theme
+  git clone https://github.com/B00merang-Artwork/Windows-10 /home/ceri/.icons/win10
+
   # Download cursors
   curl -L https://github.com/birbkeks/windows-cursors/releases/download/1.0/windows-cursors.tar.gz > ~/tmp/windows-cursors.tar.gz
   tar -xzvf ~/tmp/windows-cursors.tar.gz -C ~/.icons
@@ -184,9 +193,28 @@ elif [[ $1 == "3" ]]; then
   # Uninstall xfce4-terminal
   sudo pacman -Rncs xfce4-terminal --noconfirm
 
-  # Copy configs
+  # Copy configs, set permissions properly
     # cp -a ~/tmp/dotfiles/usr/. /usr
     # cp -a ~/tmp/dotfiles/etc/. /etc
+
+  # Install manually
+    # 011 create.fadein
+    # 111 dev.nvm
+    # 011 tools.discordchatexporter
+    # 011 tools.nine-or-null
+    # 001 tools.ntsc-rs
+  
+  # Wine/vm
+    # arrowvortex
+    # flashpoint
+    # fl studio
+    # illustrator
+    # medibang
+    # notitg
+    # nostalgia stuff
+    # photoshop
+    # pushbullet(?)
+    # skyperious
 
   # Reboot
     # sudo reboot
