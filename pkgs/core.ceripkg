@@ -1,39 +1,39 @@
-a betterbird-bin
-- btop
-a dockbarx
-- engrampa
-a floorp-bin
-- fzf
-- gvfs
-- keepassxc
-- kitty
-- lightdm
-- light-locker
-- neofetch
-a nody-greeter
-a oh-my-posh-bin
-- p7zip
-- pavucontrol
-- plymouth
-a plymouth-theme-arch10
-- pulseaudio
-- rofi
-a rofi-file-browser-extended-patched
-a rofi-greenclip
-- rofimoji
-a rustdesk-bin
-- syncthing
-a syncthingtray
-- tealdeer
-- thunar-archive-plugin
-- thunar-media-tags-plugin
-- wmctrl
-- xclip
-- xfce4
-- xfce4-battery-plugin
-a xfce4-dockbarx-plugin
-- xfce4-genmon-plugin
-- xfce4-mailwatch-plugin
-- xfce4-notifyd
-- xfce4-pulseaudio-plugin
-a xnviewmp
+111 a betterbird-bin
+111 - btop
+111 a dockbarx
+111 - engrampa
+111 a floorp-bin
+111 - fzf
+111 - gvfs
+111 - keepassxc
+111 - kitty
+111 - lightdm
+111 - light-locker
+111 - neofetch
+111 a nody-greeter
+111 a oh-my-posh-bin
+111 - p7zip
+111 - pavucontrol
+111 - plymouth
+111 a plymouth-theme-arch10
+111 - pulseaudio
+111 - rofi
+111 a rofi-file-browser-extended-patched
+111 a rofi-greenclip
+111 - rofimoji
+111 a rustdesk-bin
+111 - syncthing
+111 a syncthingtray
+111 - tealdeer
+111 - thunar-archive-plugin
+111 - thunar-media-tags-plugin
+111 - wmctrl
+111 - xclip
+111 - xfce4
+010 - xfce4-battery-plugin
+111 a xfce4-dockbarx-plugin
+111 - xfce4-genmon-plugin
+111 - xfce4-mailwatch-plugin
+111 - xfce4-notifyd
+111 - xfce4-pulseaudio-plugin
+111 a xnviewmp

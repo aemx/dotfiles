@@ -7,6 +7,15 @@
   background-color: #25252e;
 }
 
+#sn-button {
+  background-color: #131316;
+  padding: 0 6px;
+}
+
+#sn-button:hover {
+  background-color: #25252e;
+}
+
 #pulseaudio-button {
   background-color: #131316;
 }

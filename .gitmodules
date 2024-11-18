@@ -1,6 +1,0 @@
-[submodule "usr/share/web-greeter/themes/winluxe"]
-	path = usr/share/web-greeter/themes/winluxe
-	url = https://github.com/aemx/winluxe-greeter
-[submodule "home/.icons/win10"]
-	path = home/.icons/win10
-	url = https://github.com/B00merang-Artwork/Windows-10

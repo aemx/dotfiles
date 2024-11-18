@@ -3,8 +3,8 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
-   mkdir -p "$(dirname $ZINIT_HOME)"
-   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+  mkdir -p "$(dirname $ZINIT_HOME)"
+  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
 # Source/Load zinit
@@ -99,10 +99,6 @@ alias pip="py -m pip"
 alias pipin='py -m pip install'
 alias pipun='py -m pip uninstall'
 alias exiftool="~/util/exiftool/exiftool.exe"
-alias ffprobe="~/util/ffprobe/ffprobe.exe"
-alias magick='"/c/Program Files/ImageMagick/magick.exe"'
-alias pdftk='"/c/Program Files (x86)/PDFtk/bin/pdftk.exe"'
-alias ytdlp="~/util/yt-dlp/yt-dlp.exe"
 
 # Aliases: Instant run
 alias chatter="cd ~/code/sites/chatter && npm run dev"
