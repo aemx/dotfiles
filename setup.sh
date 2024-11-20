@@ -175,7 +175,6 @@ elif [[ $1 == "3" ]]; then
   # Set up virt-manager
   systemctl enable libvirtd.socket
 
-
   # Download XFCE4 theme
   - Download theme to 
   git clone https://github.com/aemx/ceres-gtk /home/ceri/.themes/ceres
@@ -194,8 +193,8 @@ elif [[ $1 == "3" ]]; then
   sudo pacman -Rncs xfce4-terminal --noconfirm
 
   # Copy configs, set permissions properly
-    # cp -a ~/tmp/dotfiles/usr/. /usr
     # cp -a ~/tmp/dotfiles/etc/. /etc
+    # grub-mkconfig -o /boot/grub/grub.cfg
 
   # Install manually
     # 011 create.fadein
