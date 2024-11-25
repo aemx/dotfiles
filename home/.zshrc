@@ -93,12 +93,13 @@ alias pacun='sudo pacman -Rcns'
 alias aurin='paru -S'
 alias aurun='paru -Rcns'
 
-# Aliases: Programs
-alias py='"/c/Program Files/Python310/python.exe"'
-alias pip="py -m pip"
-alias pipin='py -m pip install'
-alias pipun='py -m pip uninstall'
-alias exiftool="~/util/exiftool/exiftool.exe"
+# Aliases: Python
+alias py='python'
+alias pipin='python -m pip install'
+alias pipun='python -m pip uninstall'
+alias pyv='./.venv/bin/python'
+alias pyvin='pyv -m pip install'
+alias pyvun='pyv -m pip uninstall'
 
 # Aliases: Instant run
 alias chatter="cd ~/code/sites/chatter && npm run dev"

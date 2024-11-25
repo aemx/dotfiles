@@ -17,5 +17,9 @@
 111 a qdiskinfo-bin
 001 a rubyripper
 001 # unmined-gui
+011 - wine
+011 - winetricks
+011 - wine-mono
+011 - wine-gecko
 011 a youtube-dl
 011 a yt-dlg

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Discord Chat Exporter
+Comment=
+Exec=/home/ceri/util/discordchatexporter/DiscordChatExporter  
+Icon=discord
+Path=
+Terminal=false
+StartupNotify=false

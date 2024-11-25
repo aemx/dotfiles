@@ -34,7 +34,7 @@ if [[ $1 == "1" ]]; then
   swapon /dev/sda2
 
   # Install essential packages
-  pacstrap -K /mnt base base-devel linux linux-firmware intel-ucode git sudo micro zsh unzip zip grub efibootmgr lib32-systemd
+  pacstrap -K /mnt base base-devel linux linux-firmware intel-ucode git sudo micro zsh unzip zip grub efibootmgr
 
   # Generate an fstab file
   genfstab -U /mnt >> /mnt/etc/fstab
@@ -172,8 +172,14 @@ elif [[ $1 == "3" ]]; then
   sudo sed -i 's|^\(HOOKS.*fsck\)|\1 plymouth|g' /etc/mkinitcpio.conf
   mkinitcpio -P
 
-  # Set up virt-manager
-  systemctl enable libvirtd.socket
+  # Set up services
+  sudo systemctl enable libvirtd.socket
+  sudo systemctl enable NetworkManager.service
+  sudo systemctl enable ufw.service
+
+  # Set up ufw
+  sudo ufw enable
+  sudo ufw allow Deluge
 
   # Download XFCE4 theme
   - Download theme to 
