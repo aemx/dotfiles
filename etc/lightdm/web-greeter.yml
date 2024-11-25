@@ -29,7 +29,7 @@ greeter:
     screensaver_timeout: 300
     secure_mode: True
     theme: winluxe
-    icon_theme: windows_cursors
+    icon_theme: windows-cursors
     time_language: auto
 
 #

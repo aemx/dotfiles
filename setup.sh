@@ -164,7 +164,7 @@ elif [[ $1 == "3" ]]; then
   # END INSTALLATION ==========================================================
 
   # Set up DM, lockscreen
-  systemctl enable lightdm.service
+  sudo systemctl enable lightdm.service
     # xfconf-query --create -c xfce4-session -p /general/LockCommand -t string -s "light-locker-command --lock"
 
   # Add plymouth theme, change mkinitcpio's hooks
@@ -186,7 +186,7 @@ elif [[ $1 == "3" ]]; then
   git clone https://github.com/aemx/ceres-gtk /home/ceri/.themes/ceres
 
   # Download login/lock theme
-  git clone https://github.com/aemx/winluxe-greeter /usr/share/web-greeter/themes/winluxe
+  sudo git clone https://github.com/aemx/winluxe-greeter /usr/share/web-greeter/themes/winluxe
 
   # Download icon theme
   git clone https://github.com/B00merang-Artwork/Windows-10 /home/ceri/.icons/win10
